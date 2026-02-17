@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Liquid Waves V1</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <canvas id="screen"></canvas>
+
+    <header class="top">
+      <div class="brand">
+        <div class="dot"></div>
+        <div class="txt">
+          <div class="t1">LIQUID WAVES V1</div>
+          <div class="t2">GENERATIVE • PHOTO + 20s REC</div>
+        </div>
+      </div>
+      <button id="hud" class="btn glass">HIDE</button>
+    </header>
+
+    <button id="showHud" class="floatHud">SHOW HUD</button>
+
+    <section class="panel" id="panel">
+      <div class="row">
+        <div class="pill">
+          <div class="pillLabel">Format</div>
+          <select id="format">
+            <option value="auto" selected>AUTO</option>
+            <option value="portrait">PORTRAIT</option>
+            <option value="landscape">LANDSCAPE 16:9</option>
+            <option value="square">SQUARE 1:1</option>
+          </select>
+        </div>
+
+        <div class="pill">
+          <div class="pillLabel">Palette</div>
+          <select id="palette"></select>
+        </div>
+      </div>
+
+      <div class="togRow">
+        <label class="tog"><input id="t_bubbles" type="checkbox" checked><span>BUBBLE DROPLETS</span></label>
+      </div>
+
+      <div class="sliders">
+        <div class="srow">
+          <div class="slabel">WAVES</div>
+          <input id="s_waves" type="range" min="0" max="100" value="70">
+        </div>
+        <div class="srow">
+          <div class="slabel">RES</div>
+          <input id="s_res" type="range" min="360" max="1600" value="1000">
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="random" class="btn">RANDOM</button>
+        <button id="snap" class="btn">SNAP</button>
+        <button id="rec" class="btn primary">REC 20s</button>
+      </div>
+
+      <div class="tip" id="tip">Tap RANDOM to re-seed the generator.</div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
